@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<!--AngularJS extends HTML with directives.
+
+The ng-app (auto-bootstrap) directive defines an AngularJS application.
+
+ng-repeat,ng-controller,ng-class,ng-show
+
+-->
+
+<h1>My first angular app</h1>
+ 
+<div ng-app="myApp" ng-controller="myCtrl">
+        <h2>{{greeting}}</h2>
+</div>
+
+<script>
+    
+// AngularJS modules define applications:
+var app = angular.module('myApp', []);
+
+// AngularJS controllers control the data of AngularJS applications.
+// The scope is the binding part between the HTML (view) and the JavaScript (controller).
+// The scope is an object with the available properties and methods.
+// The scope is available for both the view and the controller.
+
+app.controller('myCtrl', function($scope) {
+    $scope.greeting = "Hello World";
+});
+</script>
+
+</body>
+</html>
